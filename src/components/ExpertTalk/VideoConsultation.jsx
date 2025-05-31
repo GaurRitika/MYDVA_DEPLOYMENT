@@ -204,10 +204,8 @@ const VideoConsultation = ({ expert, roomId, isInitiator, onEndSession, onConnec
 
   useEffect(() => {
     initializeCall();
-    return () => {
-      cleanup();
-    };
-  }, []);
+    return cleanup;
+  }, [roomId, isInitiator]);
 
   const toggleMute = () => {
     if (localStream) {

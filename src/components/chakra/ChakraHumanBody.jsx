@@ -1,5 +1,5 @@
 // src/components/chakra/ChakraHumanBody.jsx
-import React, { Suspense, useRef, useState } from 'react';
+import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Sparkles, Html, useGLTF } from '@react-three/drei';
 import { useNavigate } from 'react-router-dom';
@@ -121,19 +121,18 @@ const PortalEffect = ({ color, onComplete }) => {
   const meshRef = useRef();
   const { scene } = useThree();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (meshRef.current) {
-      scene.add(meshRef.current);
-      
-      gsap.to(meshRef.current.scale, {
-        x: 2,
+      const mesh = meshRef.current;
+      scene.add(mesh);
+      gsap.to(mesh.position, {
         y: 2,
         duration: 1,
         onComplete
       });
 
       return () => {
-        scene.remove(meshRef.current);
+        scene.remove(mesh);
       };
     }
   }, [scene, onComplete]);

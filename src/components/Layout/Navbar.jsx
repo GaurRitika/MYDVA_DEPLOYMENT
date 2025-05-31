@@ -5,7 +5,7 @@ import SpaIcon from '@mui/icons-material/Spa';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Navbar = ({ onMenuClick }) => {
   const [scrolled, setScrolled] = useState(false);

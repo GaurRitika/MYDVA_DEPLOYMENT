@@ -1,5 +1,5 @@
 // src/components/chakra/ChakraEffects.jsx
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Sparkles } from '@react-three/drei';
 import * as THREE from 'three';

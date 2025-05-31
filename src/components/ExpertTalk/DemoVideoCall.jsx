@@ -204,14 +204,11 @@
 // src/components/ExpertTalk/DemoVideoCall.jsx
 import React, { useState, useEffect } from 'react';
 import { 
-  Grid, 
   Button, 
   Box, 
   Typography, 
   Paper,
   Alert,
-  Divider,
-  TextField,
   Snackbar,
   IconButton,
   Tooltip,
@@ -221,8 +218,7 @@ import {
   ContentCopy, 
   Share, 
   CheckCircle,
-  Error as ErrorIcon,
-  VideocamOff
+  Error as ErrorIcon
 } from '@mui/icons-material';
 import VideoConsultation from './VideoConsultation';
 

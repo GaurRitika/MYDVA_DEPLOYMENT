@@ -1,12 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-# Ignore audio files in public/audio
-/public/audio/
 
-# Ignore models in public/models
-/public/models/
-
-# Ignore textures in public/textures
-/public/textures/
 
 # Ignore fonts in public/fonts
 /public/fonts/
