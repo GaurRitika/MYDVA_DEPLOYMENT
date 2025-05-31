@@ -212,12 +212,13 @@ import {
   Snackbar,
   IconButton,
   Tooltip,
+  Grid,
   CircularProgress
 } from '@mui/material';
 import { 
   ContentCopy, 
   Share, 
-  CheckCircle,
+  
   Error as ErrorIcon
 } from '@mui/icons-material';
 import VideoConsultation from './VideoConsultation';
@@ -316,21 +317,10 @@ const DemoVideoCall = ({ expert, onEndCall, roomId: providedRoomId }) => {
     }
   };
 
-  // In DemoVideoCall.jsx, add this function:
-const openTestWindow = () => {
+  const openTestWindow = () => {
     const joinUrl = `${window.location.origin}/dashboard/expert-talk?room=${roomId}`;
     window.open(joinUrl, '_blank', 'width=800,height=600');
   };
-  
-  // Add this button near your other buttons:
-  <Button
-    variant="outlined"
-    onClick={openTestWindow}
-    sx={{ mt: 2 }}
-  >
-    Open Test Window
-  </Button>
-  
 
   return (
     <Box>
@@ -398,6 +388,12 @@ const openTestWindow = () => {
                   onClick={handleShare}
                 >
                   Share
+                </Button>
+                <Button
+                  variant="outlined"
+                  onClick={openTestWindow}
+                >
+                  Open Test Window
                 </Button>
               </Box>
             </Box>
